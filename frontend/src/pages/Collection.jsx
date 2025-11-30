@@ -114,7 +114,7 @@ const applyFilter = () =>{
 
 
   return (
-    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-gray-200 pb-20'>
+    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-gray-200 '>
 
       {/*filter option*/}
       <div className='min-w-60'>
@@ -170,7 +170,7 @@ const applyFilter = () =>{
       <div className='grid grid-cols-2 md:grid-cols-3 lg-grid-cols-4 gap-4 gap-y-6'>
           {
             filterProducts.map((item,index)=>(
-               <ProductItem key={index} id={item.id} image={item.image} name={item.name} price={item.price}/>
+               <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price}/>
             ))
           }
 

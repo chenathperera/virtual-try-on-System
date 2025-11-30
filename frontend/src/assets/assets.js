@@ -10,9 +10,15 @@ import quality_icon from './quality_icon.svg'
 import support_icon from './support_icon.svg'
 import dropdown2_icon from './dropdown2_icon.svg'
 import cross_icon from './cross_icon.svg'
+import star_icon from './star_icon.svg'
+import star_icon2 from './star_icon2.svg'
 
 // Product Image Imports (Original 10)
 import white_lace_dress from './im1.png'
+import im111 from './im111.png'
+import im112 from './im112.png'
+import im113 from './im113.png'
+
 import sequin_cocktail_dress from './im2.png'
 import lime_green_one_shoulder_dress from './im3.png'
 import royal_blue_velvet_dress from './im4.png'
@@ -44,7 +50,9 @@ export const assets = {
     quality_icon,
     support_icon,
     dropdown2_icon,
-    cross_icon
+    cross_icon,
+    star_icon,
+    star_icon2
 }
 
 // ---
@@ -56,7 +64,7 @@ export const products = [
         name: "Women Floral Print Mini Dress",
         description: "Elegant white lace dress with long sleeves, perfect for a chic event.",
         price: 100,
-        image: [white_lace_dress],
+        image: [white_lace_dress,im111,im112,im113],
         category: "Men",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],

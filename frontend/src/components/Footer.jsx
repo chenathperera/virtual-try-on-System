@@ -55,15 +55,17 @@ const Footer = () => {
 
 const styles = {
   footer: {
-    width: '100%',                   // FULL WIDTH (IMPORTANT)
+    width: '100%',                   
     backgroundColor: '#323232',
     color: '#d9d9d9',
     margin: 0,
-    padding: '60px 0',               // Remove left/right padding
+    padding: '60px 0',               
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     fontFamily: "'Outfit', sans-serif",
+    // 🚀 Added margin-top for 20px spacing
+    marginTop: '20px', 
   },
 
   footerContent: {
@@ -71,7 +73,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    padding: '0 5%',                 // Small padding inside only (optional)
+    padding: '0 5%',
     boxSizing: 'border-box',
     gap: '40px',
   },
