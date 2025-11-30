@@ -8,6 +8,7 @@ import hero_img from './hero_img.jpg'
 import exchange_icon from './exchange_icon.svg'
 import quality_icon from './quality_icon.svg'
 import support_icon from './support_icon.svg'
+import dropdown2_icon from './dropdown2_icon.svg'
 
 // Product Image Imports (Original 10)
 import white_lace_dress from './im1.png'
@@ -40,7 +41,8 @@ export const assets = {
     hero_img,
     exchange_icon,
     quality_icon,
-    support_icon
+    support_icon,
+    dropdown2_icon,
 }
 
 // ---
@@ -53,8 +55,8 @@ export const products = [
         description: "Elegant white lace dress with long sleeves, perfect for a chic event.",
         price: 100,
         image: [white_lace_dress],
-        category: "Women",
-        subCategory: "Dresses",
+        category: "Men",
+        subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716634345448,
         bestseller: false // Changed to false as requested
@@ -65,7 +67,7 @@ export const products = [
         description: "A sparkling long-sleeved dress in a rich burgundy sequin material.",
         price: 180,
         image: [sequin_cocktail_dress],
-        category: "Women",
+        category: "Men",
         subCategory: "Dresses",
         sizes: ["S", "M", "L"],
         date: 1716634400123,
