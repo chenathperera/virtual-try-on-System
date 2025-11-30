@@ -8,7 +8,8 @@ import ProductItem from '../components/ProductItem';
 
 const Collection = () => {
 
-  const{products} = useContext(ShopContext);
+   const{products, search, showSearch} = useContext(ShopContext);
+
   const[showFilter,setShowFilter] = useState(false);
   const[filterProducts,setFilterproducts] = useState([]);
     const[category,setCategory] = useState([]);
@@ -42,6 +43,13 @@ const Collection = () => {
 const applyFilter = () =>{
 
         let productsCopy = products.slice();
+
+        if(showSearch && search){
+
+          productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
+        }
+
+
         if(category.length>0){
 
           productsCopy = productsCopy.filter(item => category.includes(item.category));
@@ -95,7 +103,7 @@ const applyFilter = () =>{
 
     applyFilter();
 
-  },[category,subCategory])
+  },[category,subCategory,search,showSearch])
 
   useEffect(()=>{
 
@@ -106,7 +114,7 @@ const applyFilter = () =>{
 
 
   return (
-    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t pb-20'>
+    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t border-gray-200 pb-20'>
 
       {/*filter option*/}
       <div className='min-w-60'>

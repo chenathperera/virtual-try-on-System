@@ -9,6 +9,7 @@ import exchange_icon from './exchange_icon.svg'
 import quality_icon from './quality_icon.svg'
 import support_icon from './support_icon.svg'
 import dropdown2_icon from './dropdown2_icon.svg'
+import cross_icon from './cross_icon.svg'
 
 // Product Image Imports (Original 10)
 import white_lace_dress from './im1.png'
@@ -43,6 +44,7 @@ export const assets = {
     quality_icon,
     support_icon,
     dropdown2_icon,
+    cross_icon
 }
 
 // ---

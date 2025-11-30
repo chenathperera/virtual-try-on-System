@@ -13,6 +13,7 @@ import Product from './pages/Product'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import SearchBar from './components/SearchBar'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       {/* NAVBAR (Kept same styling) */}
       <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
         <Navbar />
+        <SearchBar/>
       </div>
 
       {/* PAGE CONTENT (Kept same padding) */}
