@@ -12,6 +12,7 @@ import dropdown2_icon from './dropdown2_icon.svg'
 import cross_icon from './cross_icon.svg'
 import star_icon from './star_icon.svg'
 import star_icon2 from './star_icon2.svg'
+import bin_icon from './bin_icon.svg'
 
 // Product Image Imports (Original 10)
 import white_lace_dress from './im1.png'
@@ -52,7 +53,8 @@ export const assets = {
     dropdown2_icon,
     cross_icon,
     star_icon,
-    star_icon2
+    star_icon2,
+    bin_icon
 }
 
 // ---
