@@ -78,7 +78,7 @@ export const products = [
         price: 180,
         image: [sequin_cocktail_dress],
         category: "Men",
-        subCategory: "Dresses",
+        subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716634400123,
         bestseller: false

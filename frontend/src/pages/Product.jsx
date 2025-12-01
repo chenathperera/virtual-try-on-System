@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
 
     const{productId} = useParams();
-    const{products, currency} = useContext(ShopContext);
+    const{products, currency,addToCart} = useContext(ShopContext);
     const [productData,setProductData] = useState(false);
     const [image,setImage] = useState('');
     const[size,setSize] = useState('')
@@ -59,11 +60,11 @@ const Product = () => {
         <div className='flex-1'>
           <h1 className='font-medium text=2xl mt -2'>{productData.name}</h1>
           <div className='flex items-center gap-1 mt-2'>
-            <img  classname='w-3 5' altr="" src={assets.star_icon} className='w-3 5' />
-            <img  classname='w-3 5' altr="" src={assets.star_icon} className='w-3 5' />
-            <img  classname='w-3 5' altr="" src={assets.star_icon} className='w-3 5' />
-            <img  classname='w-3 5' altr="" src={assets.star_icon} className='w-3 5' />
-            <img  classname='w-3 5' altr="" src={assets.star_icon2} className='w-3 5' />
+            <img  className='w-3 5' altr="" src={assets.star_icon}  />
+            <img  className='w-3 5' altr="" src={assets.star_icon}  />
+            <img  className='w-3 5' altr="" src={assets.star_icon}  />
+            <img  className='w-3 5' altr="" src={assets.star_icon}  />
+            <img  className='w-3 5' altr="" src={assets.star_icon2}  />
             <p className='pl-2'>(122)</p>
           </div>
           <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
@@ -77,7 +78,7 @@ const Product = () => {
 
             </div>
            </div>
-           <button className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+           <button onClick={()=> addToCart(productData._id,size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
            <hr className='mt-8 sm:w-4/5 h-[1px] border-none bg-gray-300'></hr>
            <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                 <p>100% Original product.</p>
@@ -100,6 +101,9 @@ const Product = () => {
         </div>
       </div>
           
+           {/*related products */}
+
+           <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
 
 
 
