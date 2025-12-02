@@ -2,7 +2,7 @@ import logo from './logo.png'
 import cart_icon from './cart_icon.svg'
 import serach_icon from './search_icon.svg'
 import profile_icon from './profile_icon.svg'
-import menu_icon  from './menu_icon.svg'
+import menu_icon from './menu_icon.svg'
 import dropdown_icon from './dropdown_icon.svg'
 import hero_img from './hero_img.jpg'
 import exchange_icon from './exchange_icon.svg'
@@ -32,13 +32,23 @@ import denim_shift_dress from './im10.png'
 
 // New Product Image Imports (im11 to im15)
 import metallic_slip_dress from './im11.png' // New Dress 1
-import emerald_satin_gown from './im12.png'    // New Dress 2
-import blush_floral_maxi from './im13.png'     // New Dress 3
+import emerald_satin_gown from './im12.png' // New Dress 2
+import blush_floral_maxi from './im13.png' // New Dress 3
 import strapless_bandage_mini from './im14.png' // New Dress 4
-import geometric_print_midi from './im15.png'  // New Dress 5
+import geometric_print_midi from './im15.png' // New Dress 5
 
 // ---
 
+/**
+ * Global Constants
+ */
+export const delivery_fee = 5; // Added the missing delivery_fee
+
+// ---
+
+/**
+ * Asset Exports
+ */
 export const assets = {
     logo,
     cart_icon,
@@ -59,6 +69,9 @@ export const assets = {
 
 // ---
 
+/**
+ * Product Data Array
+ */
 export const products = [
     // --- Existing 10 Products (bestseller: false/unchanged) ---
     {
@@ -67,11 +80,11 @@ export const products = [
         description: "Elegant white lace dress with long sleeves, perfect for a chic event.",
         price: 100,
         image: [white_lace_dress,im111,im112,im113],
-        category: "Men",
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716634345448,
-        bestseller: false // Changed to false as requested
+        bestseller: false
     },
     {
         _id: "000002",
@@ -79,7 +92,7 @@ export const products = [
         description: "A sparkling long-sleeved dress in a rich burgundy sequin material.",
         price: 180,
         image: [sequin_cocktail_dress],
-        category: "Men",
+        category: "Women",
         subCategory: "Topwear",
         sizes: ["S", "M", "L"],
         date: 1716634400123,
@@ -190,7 +203,7 @@ export const products = [
         price: 280,
         image: [metallic_slip_dress],
         category: "Women",
-        subCategory: "Dresses",
+        subCategory: "BDresses",
         sizes: ["XS", "S", "M"],
         date: 1716721200000, // Newer timestamp
         bestseller: true // Set to true
@@ -202,7 +215,7 @@ export const products = [
         price: 350,
         image: [emerald_satin_gown],
         category: "Women",
-        subCategory: "Dresses",
+        subCategory: "BDresses",
         sizes: ["S", "M", "L"],
         date: 1716721201000,
         bestseller: true // Set to true
@@ -214,7 +227,7 @@ export const products = [
         price: 175,
         image: [blush_floral_maxi],
         category: "Women",
-        subCategory: "Dresses",
+        subCategory: "BDresses",
         sizes: ["M", "L", "XL"],
         date: 1716721202000,
         bestseller: true // Set to true
@@ -226,7 +239,7 @@ export const products = [
         price: 195,
         image: [strapless_bandage_mini],
         category: "Women",
-        subCategory: "Dresses",
+        subCategory: "BDresses",
         sizes: ["XS", "S", "M"],
         date: 1716721203000,
         bestseller: true // Set to true
@@ -238,7 +251,7 @@ export const products = [
         price: 155,
         image: [geometric_print_midi],
         category: "Women",
-        subCategory: "Dresses",
+        subCategory: "BDresses",
         sizes: ["S", "M", "L"],
         date: 1716721204000,
         bestseller: true // Set to true
