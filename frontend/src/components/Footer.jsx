@@ -55,17 +55,17 @@ const Footer = () => {
 
 const styles = {
   footer: {
-    width: '100%',                   
+    width: '100%', 					
     backgroundColor: '#323232',
     color: '#d9d9d9',
     margin: 0,
-    padding: '60px 0',               
+    padding: '60px 0', 					
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     fontFamily: "'Outfit', sans-serif",
-    // 🚀 Added margin-top for 20px spacing
-    marginTop: '20px', 
+    // 🚀 UPDATED margin-top to 100px for more spacing
+    marginTop: '100px', 
   },
 
   footerContent: {
