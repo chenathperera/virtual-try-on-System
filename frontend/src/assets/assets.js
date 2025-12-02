@@ -37,6 +37,9 @@ import blush_floral_maxi from './im13.png' // New Dress 3
 import strapless_bandage_mini from './im14.png' // New Dress 4
 import geometric_print_midi from './im15.png' // New Dress 5
 
+import stripe_logo from './stripe_logo.png'
+import razaorpay_logo  from './Razorpay_logo.svg'
+
 // ---
 
 /**
@@ -64,7 +67,9 @@ export const assets = {
     cross_icon,
     star_icon,
     star_icon2,
-    bin_icon
+    bin_icon,
+    stripe_logo, 
+    razaorpay_logo
 }
 
 // ---
