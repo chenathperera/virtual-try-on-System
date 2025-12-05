@@ -11,8 +11,37 @@ const createToken = (id) => {
 
 // rout login (To be implemented)
 const loginUser = async (req, res) => {
-    // Implementation for user login goes here
-    res.json({ success: false, message: "Login endpoint not yet implemented" })
+    try {
+
+        const {  email, password } = req.body;
+        
+        // 1. Check if user already exists
+        const user = await userModel.findOne({ email });
+
+        if (!user) {
+            return res.json({ success: false, message: "User doesnt exists" })
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        // 2. Validate input fields
+        if (isMatch) {
+
+            const token = createToken(user._id)
+            res.json({ success: true,token})
+
+        }else{
+
+            res.json({ success: false, message: "Invalid credentials" })
+        }
+        
+    } catch (error) {
+
+        console.log("Error in registerUser:", error);
+        res.json({ success: false, message: error.message })
+
+
+    }
 }
 
 // rout register
