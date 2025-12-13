@@ -5,6 +5,7 @@ import add from './add_icon.svg'
 import order from './order.svg'
 import list from './list.svg'
 import upload from './upload.png'
+import parcel from './parcel.svg'
 
 
 
@@ -14,5 +15,6 @@ export const assets = {
     order,
     list,
     upload,
+    parcel
    
 }
