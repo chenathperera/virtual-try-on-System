@@ -34,6 +34,26 @@ const fetchAllOrders = async ()=>{
 
 }
 
+const statusHandler = async (event,orderId)=>{
+    
+    try {
+    
+                 const response=   await axios.post(backendUrl + '/api/order/status',{orderId,status: event.target.value},{headers:{token}})
+                 if(response.data.success){
+                  
+                    await fetchAllOrders()
+
+                 }
+                    
+                } catch (error) {
+    
+                    console.log(error)
+                    toast.error(response.data.message)
+                    
+                }
+
+}
+
 useEffect(()=>{
   fetchAllOrders();
 
@@ -73,13 +93,18 @@ useEffect(()=>{
                 <p>Date: {new Date(order.date).toLocaleDateString()}</p>
               </div>
               <p className='text-sm sm:text-[15px]'>{currency}{order.amount}</p>
-              <select className='p-2 font-semibold'>
-                <option value={order.status}>Order Placed</option>
-                 <option value="Packing">Packing</option>
-                  <option value="Shipped">Shipped</option>
-                   <option value="Out for delivery">Out for delivery</option>
-                    <option value="Delivered">Delevered</option>
-              </select>
+              <select
+  value={order.status}
+  onChange={(event)=>statusHandler(event,order._id)}
+  className='p-2 font-semibold'
+>
+  <option value="Order Placed">Order Placed</option>
+  <option value="Packing">Packing</option>
+  <option value="Shipped">Shipped</option>
+  <option value="Out for delivery">Out for delivery</option>
+  <option value="Delivered">Delivered</option>
+</select>
+
               </div>
             ))
 
