@@ -7,6 +7,7 @@ import userRouter from './routes/userRoute.js'
 import productRouter from './routes/productRoute.js'
 import cartRouter from './routes/cartRoute.js'
 import orderRouter from './routes/orderRoute.js'
+import tryOnRoute from './routes/tryOnRoute.js';
 
 //app config
 const app =express()
@@ -25,6 +26,7 @@ app.use('/api/product',productRouter)
 app.use('/api/cart',cartRouter)
 app.use('/api/order',orderRouter)
 
+app.use('/api/try-on', tryOnRoute);
 
 app.get('/',(req,res)=>{
     res.send("API Working")

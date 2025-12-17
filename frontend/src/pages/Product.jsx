@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
+import TryOnModal from '../components/TryOnModal';
 
 const Product = () => {
 
@@ -10,7 +11,8 @@ const Product = () => {
     const{products, currency,addToCart} = useContext(ShopContext);
     const [productData,setProductData] = useState(false);
     const [image,setImage] = useState('');
-    const[size,setSize] = useState('')
+    const[size,setSize] = useState('');
+    const [showTryOn, setShowTryOn] = useState(false);
 
 
     const fetchProductData = async () =>{
@@ -78,7 +80,11 @@ const Product = () => {
 
             </div>
            </div>
+           
            <button onClick={()=> addToCart(productData._id,size)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+           <button onClick={()=> setShowTryOn(true)} className='ml-4  bg-orange-500 text-white px-8 py-3 text-sm mt-4 hover:bg-orange-600'>TRY ON</button>
+             
+          
            <hr className='mt-8 sm:w-4/5 h-[1px] border-none bg-gray-300'></hr>
            <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                 <p>100% Original product.</p>
@@ -100,6 +106,7 @@ const Product = () => {
           <p>Indulge in luxury with this stunning Emerald Satin Midi Gown. Crafted from a rich, heavy satin, this dress boasts a jewel-tone green that is both dramatic and timeless, making it perfect for formal events, weddings, and black-tie affairs. The gown features a flattering bias cut that gently skims the body, ensuring an elegant and elongated silhouette. With a modest midi length and delicate tailoring, it balances refined simplicity with undeniable opulence. Pair it with gold jewelry and classic heels for a truly regal entrance.</p>
         </div>
       </div>
+      {showTryOn && <TryOnModal product={productData} close={()=>setShowTryOn(false)} />}
           
            {/*related products */}
 
