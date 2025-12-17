@@ -41,7 +41,7 @@ const Verify = () => {
 
   useEffect(()=>{
 
-    loadOrderData()
+    verifyPayment()
 
   },[token])
 
