@@ -39,6 +39,9 @@ import geometric_print_midi from './im15.png' // New Dress 5
 
 import stripe_logo from './stripe_logo.png'
 import razaorpay_logo  from './Razorpay_logo.svg'
+import d1 from './dev1.png'
+import d2 from './dev2.png'
+
 
 // ---
 
@@ -69,7 +72,8 @@ export const assets = {
     star_icon2,
     bin_icon,
     stripe_logo, 
-    razaorpay_logo
+    razaorpay_logo,
+    d1,d2
 }
 
 // ---

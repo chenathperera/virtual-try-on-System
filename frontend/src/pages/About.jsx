@@ -67,11 +67,11 @@ const About = () => {
                     {/* Founder 1 */}
                     <div className='flex flex-col items-center'>
                         <img 
-                            src={founderImage1} // Replace with specific founder image
+                            src={assets.d1} // Replace with specific founder image
                             alt="Co-Founder Alice Smith" 
                             className='w-60 h-60 object-cover rounded-full mb-6 border-4 border-gray-100'
                         />
-                        <h3 className='text-2xl font-serif text-[#333]'>Alice Smith</h3>
+                        <h3 className='text-2xl font-serif text-[#333]'>Kim Sooya</h3>
                         <p className='text-sm text-gray-500 uppercase tracking-wider mb-3'>Co-Founder & CEO</p>
                         <p className='text-gray-700 max-w-sm'>
                             Alice brings a background in Parisian haute couture, focusing on fabric integrity and design innovation.
@@ -81,11 +81,11 @@ const About = () => {
                     {/* Founder 2 */}
                     <div className='flex flex-col items-center'>
                         <img 
-                            src={founderImage2} // Replace with specific founder image
+                            src={assets.d2} // Replace with specific founder image
                             alt="Co-Founder John Doe" 
                             className='w-60 h-60 object-cover rounded-full mb-6 border-4 border-gray-100'
                         />
-                        <h3 className='text-2xl font-serif text-[#333]'>John Doe</h3>
+                        <h3 className='text-2xl font-serif text-[#333]'>Kim Jisoo</h3>
                         <p className='text-sm text-gray-500 uppercase tracking-wider mb-3'>Co-Founder & Creative Director</p>
                         <p className='text-gray-700 max-w-sm'>
                             John drives our brand aesthetic, ensuring every collection reflects modern trends while maintaining timeless quality.
