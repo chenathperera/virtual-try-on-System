@@ -13,6 +13,7 @@ import tryOnRoute from './routes/tryOnRoute.js';
 const app =express()
 const port = process.env.PORT || 4000
 connectDB() // Attempt to connect to the database
+console.log("Connecting to:", process.env.MONGODB_URI);
 connectCloudnary()
 
 
